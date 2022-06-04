@@ -1,0 +1,28 @@
+{
+  "root": "apps/mfe-test-app-e2e",
+  "sourceRoot": "apps/mfe-test-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/mfe-test-app-e2e/cypress.json",
+        "devServerTarget": "mfe-test-app:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mfe-test-app:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mfe-test-app-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["mfe-test-app"]
+}

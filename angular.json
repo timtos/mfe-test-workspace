@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "mfe-test-app": "apps/mfe-test-app",
+    "mfe-test-app-e2e": "apps/mfe-test-app-e2e"
+  }
+}
